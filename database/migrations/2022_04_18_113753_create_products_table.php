@@ -20,6 +20,8 @@ return new class extends Migration
             $table->double('price')->nullable();
             $table->integer('quantity')->nullable();
             $table->timestamps();
+            $table->unsignedBigInteger('Catagory_id')->foreign('Catagory_id')->references('id')->on('Catagories_id')->onDelete('Cascade');
+            
         });
     }
 
